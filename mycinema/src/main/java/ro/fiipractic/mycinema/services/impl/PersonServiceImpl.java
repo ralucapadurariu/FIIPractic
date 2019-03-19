@@ -13,11 +13,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Autowired
     PersonRepository personRepository;
-
-    @Override
-    public String helloFormService() {
-        return "hello from service";
-    }
+    
 
     @Override
     public Person savePerson(Person personToSave) {
@@ -49,15 +45,6 @@ public class PersonServiceImpl implements PersonService {
 
     }
 
-//    public void updateUser(Userinfos u) {
-//    User userFromDb = userRepository.findById(u.getid());
-//crush the variables of the object found
-//        userFromDb.setFirstname("john");
-//        userFromDb.setLastname("dew");
-//        userFromDb.setAge(16);
-//
-//        userRepository.save(userFromDb);
-   // }
 
 
 }

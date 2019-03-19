@@ -7,11 +7,6 @@ import java.util.List;
 
 public interface PersonService {
 
-    int ID = 0;
-    static final String color = "red";
-
-    String helloFormService();
-
     Person savePerson(Person personToSave);
 
     Person findById(Long id);
