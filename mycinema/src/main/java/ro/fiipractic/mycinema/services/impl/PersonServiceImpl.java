@@ -13,7 +13,7 @@ public class PersonServiceImpl implements PersonService {
 
     @Autowired
     PersonRepository personRepository;
-    
+
 
     @Override
     public Person savePerson(Person personToSave) {
@@ -42,9 +42,14 @@ public class PersonServiceImpl implements PersonService {
         personFromDb.setEmail(personToUpdate.getEmail());
         personFromDb.setPhone(personToUpdate.getPhone());
         personRepository.save(personFromDb);
-
     }
 
+    @Override
+    public boolean existsById(Long id) {
+        return personRepository.existsById(id);
+
+
+    }
 
 
 }

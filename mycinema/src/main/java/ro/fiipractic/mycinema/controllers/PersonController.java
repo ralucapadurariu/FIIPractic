@@ -42,5 +42,12 @@ public class PersonController {
 
     }
 
+    @GetMapping(value="/existPerson")
+    public String existsById(@RequestParam Long id) {
+        if (personService.existsById(id) == true) {
+            return "Person with id " + id + " exists in database";
+        } else return "Person with id " + id + " doesn't exist in database";
+    }
+
 
 }

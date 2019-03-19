@@ -16,4 +16,7 @@ public interface PersonService {
     void deletePerson (Long id);
 
     void updatePerson(Person personToUpdate);
+
+    boolean existsById(Long id);
+
 }
